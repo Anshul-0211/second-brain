@@ -140,58 +140,58 @@ scnd_brain/
 ├── lib/                                     # 📱 Flutter Mobile Frontend
 │   ├── main.dart                            # Entrypoint, MultiProvider setup, theme load
 │   ├── models/
-│   │   └── [item.dart](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/lib/models/item.dart)                 # Item, Tag, Category, Note, and File serialization schemas
+│   │   └── [item.dart](./lib/models/item.dart)                 # Item, Tag, Category, Note, and File serialization schemas
 │   ├── providers/
-│   │   └── [providers.dart](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/lib/providers/providers.dart)           # ItemsProvider (feed, categories) & SearchProvider (debounced search state)
+│   │   └── [providers.dart](./lib/providers/providers.dart)           # ItemsProvider (feed, categories) & SearchProvider (debounced search state)
 │   ├── services/
-│   │   └── [api_service.dart](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/lib/services/api_service.dart)       # REST Client with x-api-key headers, multi-part file uploads
+│   │   └── [api_service.dart](./lib/services/api_service.dart)       # REST Client with x-api-key headers, multi-part file uploads
 │   ├── screens/
-│   │   ├── [dump_screen.dart](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/lib/screens/dump_screen.dart)       # "The Drop": frictionless capture textarea
-│   │   ├── [feed_screen.dart](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/lib/screens/feed_screen.dart)       # "The Stream": feed grid, categories, daily recommendation slider
-│   │   ├── [detail_screen.dart](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/lib/screens/detail_screen.dart)     # "The Focus": distraction-free reading, attachment views
-│   │   ├── [search_screen.dart](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/lib/screens/search_screen.dart)     # Semantic/Hybrid search screen
-│   │   └── [reminders_screen.dart](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/lib/screens/reminders_screen.dart)  # "Gentle Nudges": task review, marking complete
+│   │   ├── [dump_screen.dart](./lib/screens/dump_screen.dart)       # "The Drop": frictionless capture textarea
+│   │   ├── [feed_screen.dart](./lib/screens/feed_screen.dart)       # "The Stream": feed grid, categories, daily recommendation slider
+│   │   ├── [detail_screen.dart](./lib/screens/detail_screen.dart)     # "The Focus": distraction-free reading, attachment views
+│   │   ├── [search_screen.dart](./lib/screens/search_screen.dart)     # Semantic/Hybrid search screen
+│   │   └── [reminders_screen.dart](./lib/screens/reminders_screen.dart)  # "Gentle Nudges": task review, marking complete
 │   └── app/
-│       └── [theme.dart](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/lib/app/theme.dart)                 # Cognitive Nebula styles, colors, and font configurations
+│       └── [theme.dart](./lib/app/theme.dart)                 # Cognitive Nebula styles, colors, and font configurations
 │
 └── server/                                  # ⚙️ Node.js + Hono.js Backend
     ├── src/
-    │   ├── [index.ts](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/server/src/index.ts)                   # Server startup, global middleware, scheduler intervals (30m / 8am)
+    │   ├── [index.ts](./server/src/index.ts)                   # Server startup, global middleware, scheduler intervals (30m / 8am)
     │   ├── lib/
-    │   │   └── [config.ts](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/server/src/lib/config.ts)         # Validation of environment configurations, ports, credentials
+    │   │   └── [config.ts](./server/src/lib/config.ts)         # Validation of environment configurations, ports, credentials
     │   ├── db/
-    │   │   ├── [client.ts](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/server/src/db/client.ts)         # Supabase client instantiation
-    │   │   ├── [queries.ts](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/server/src/db/queries.ts)        # Direct SQL transaction wrappers (CRUD, vector query)
+    │   │   ├── [client.ts](./server/src/db/client.ts)         # Supabase client instantiation
+    │   │   ├── [queries.ts](./server/src/db/queries.ts)        # Direct SQL transaction wrappers (CRUD, vector query)
     │   │   └── migrations/                  # SQL Migrations for database setup
-    │   │       ├── [001_init.sql](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/server/src/db/migrations/001_init.sql)
-    │   │       ├── [002_add_item_notes.sql](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/server/src/db/migrations/002_add_item_notes.sql)
-    │   │       ├── [003_add_reminders_and_entities.sql](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/server/src/db/migrations/003_add_reminders_and_entities.sql)
-    │   │       ├── [004_add_recommendations.sql](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/server/src/db/migrations/004_add_recommendations.sql)
-    │   │       └── [005_add_file_support.sql](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/server/src/db/migrations/005_add_file_support.sql)
+    │   │       ├── [001_init.sql](./server/src/db/migrations/001_init.sql)
+    │   │       ├── [002_add_item_notes.sql](./server/src/db/migrations/002_add_item_notes.sql)
+    │   │       ├── [003_add_reminders_and_entities.sql](./server/src/db/migrations/003_add_reminders_and_entities.sql)
+    │   │       ├── [004_add_recommendations.sql](./server/src/db/migrations/004_add_recommendations.sql)
+    │   │       └── [005_add_file_support.sql](./server/src/db/migrations/005_add_file_support.sql)
     │   ├── middleware/
-    │   │   └── [apiKey.ts](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/server/src/middleware/apiKey.ts)       # x-api-key validation middleware
+    │   │   └── [apiKey.ts](./server/src/middleware/apiKey.ts)       # x-api-key validation middleware
     │   ├── routes/
-    │   │   ├── [items.ts](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/server/src/routes/items.ts)           # CRUD endpoints, item updates, attachment bindings
-    │   │   ├── [notes.ts](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/server/src/routes/notes.ts)           # Sub-resource notes endpoints
-    │   │   ├── [search.ts](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/server/src/routes/search.ts)         # POST /api/search with pgvector Cosine similarity
-    │   │   ├── [reminders.ts](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/server/src/routes/reminders.ts)       # CRUD for entity-created and manual reminders
-    │   │   ├── [recommendations.ts](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/server/src/routes/recommendations.ts) # Recommendations retrieval & dismissals
-    │   │   └── [tags.ts](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/server/src/routes/tags.ts)             # GET /api/tags, /api/categories, /api/profile
+    │   │   ├── [items.ts](./server/src/routes/items.ts)           # CRUD endpoints, item updates, attachment bindings
+    │   │   ├── [notes.ts](./server/src/routes/notes.ts)           # Sub-resource notes endpoints
+    │   │   ├── [search.ts](./server/src/routes/search.ts)         # POST /api/search with pgvector Cosine similarity
+    │   │   ├── [reminders.ts](./server/src/routes/reminders.ts)       # CRUD for entity-created and manual reminders
+    │   │   ├── [recommendations.ts](./server/src/routes/recommendations.ts) # Recommendations retrieval & dismissals
+    │   │   └── [tags.ts](./server/src/routes/tags.ts)             # GET /api/tags, /api/categories, /api/profile
     │   ├── pipeline/                        # 🧠 The 9-Step AI Processing Pipeline
-    │   │   ├── [processor.ts](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/server/src/pipeline/processor.ts)     # Pipeline Orchestrator (Steps 1 to 9)
-    │   │   ├── [typeDetector.ts](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/server/src/pipeline/typeDetector.ts)   # Regex type classifier (link vs note vs file)
-    │   │   ├── [metadataExtractor.ts](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/server/src/pipeline/metadataExtractor.ts) # Link crawling & title extractor
-    │   │   ├── [nlpTagger.ts](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/server/src/pipeline/nlpTagger.ts)       # NLP tokenizing & POS tagging
-    │   │   ├── [ruleClassifier.ts](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/server/src/pipeline/ruleClassifier.ts)   # Score-based keyword matcher
-    │   │   ├── [aiClassifier.ts](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/server/src/pipeline/aiClassifier.ts)     # Groq LLM JSON classification
-    │   │   ├── [embedder.ts](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/server/src/pipeline/embedder.ts)         # Cloudflare Workers bge-small API embedding generator
-    │   │   ├── [entityExtractor.ts](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/server/src/pipeline/entityExtractor.ts)   # Chrono-node + compromise task extractor
-    │   │   └── [reminderCreator.ts](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/server/src/pipeline/reminderCreator.ts)   # Entity relational parser to insert reminders
+    │   │   ├── [processor.ts](./server/src/pipeline/processor.ts)     # Pipeline Orchestrator (Steps 1 to 9)
+    │   │   ├── [typeDetector.ts](./server/src/pipeline/typeDetector.ts)   # Regex type classifier (link vs note vs file)
+    │   │   ├── [metadataExtractor.ts](./server/src/pipeline/metadataExtractor.ts) # Link crawling & title extractor
+    │   │   ├── [nlpTagger.ts](./server/src/pipeline/nlpTagger.ts)       # NLP tokenizing & POS tagging
+    │   │   ├── [ruleClassifier.ts](./server/src/pipeline/ruleClassifier.ts)   # Score-based keyword matcher
+    │   │   ├── [aiClassifier.ts](./server/src/pipeline/aiClassifier.ts)     # Groq LLM JSON classification
+    │   │   ├── [embedder.ts](./server/src/pipeline/embedder.ts)         # Cloudflare Workers bge-small API embedding generator
+    │   │   ├── [entityExtractor.ts](./server/src/pipeline/entityExtractor.ts)   # Chrono-node + compromise task extractor
+    │   │   └── [reminderCreator.ts](./server/src/pipeline/reminderCreator.ts)   # Entity relational parser to insert reminders
     │   └── services/
-    │       ├── [recommendationEngine.ts](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/server/src/services/recommendationEngine.ts) # Algorithms for daily scoring
-    │       ├── [dailyScheduler.ts](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/server/src/services/dailyScheduler.ts)       # Scheduler calculating remaining delay till 8am UTC
-    │       ├── [notificationScheduler.ts](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/server/src/services/notificationScheduler.ts) # Scheduler processing alerts every 30 minutes
-    │       └── [fileUploadService.ts](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/server/src/services/fileUploadService.ts)   # Supabase Storage attachment uploads
+    │       ├── [recommendationEngine.ts](./server/src/services/recommendationEngine.ts) # Algorithms for daily scoring
+    │       ├── [dailyScheduler.ts](./server/src/services/dailyScheduler.ts)       # Scheduler calculating remaining delay till 8am UTC
+    │       ├── [notificationScheduler.ts](./server/src/services/notificationScheduler.ts) # Scheduler processing alerts every 30 minutes
+    │       └── [fileUploadService.ts](./server/src/services/fileUploadService.ts)   # Supabase Storage attachment uploads
     └── package.json
 ```
 
@@ -307,7 +307,7 @@ $$;
 
 ## ⚙️ The 9-Step AI Processing Pipeline
 
-When a payload is posted to `POST /api/items`, it flows sequentially through the [server/src/pipeline/processor.ts](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/server/src/pipeline/processor.ts) script:
+When a payload is posted to `POST /api/items`, it flows sequentially through the [server/src/pipeline/processor.ts](./server/src/pipeline/processor.ts) script:
 
 1.  **📌 Type Detector:** Evaluates the input string using regular expressions. If it matches a URL format, the type is set to `link`. If it's a file stream/attachment, it's flagged as `file`. Otherwise, it default-classifies as `note`.
 2.  **📄 Metadata Extractor:** 
@@ -423,7 +423,7 @@ RECOMMENDATION_HOUR=8
 ### 1. Database Setup (Supabase)
 1. Create a new project on the [Supabase Dashboard](https://database.new).
 2. Go to **SQL Editor** in the side panel.
-3. Run the migrations in order from [server/src/db/migrations/](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/server/src/db/migrations/):
+3. Run the migrations in order from [server/src/db/migrations/](./server/src/db/migrations/):
    *   `001_init.sql` (Creates vector extension, tables, default categories, and `search_items` function)
    *   `002_add_item_notes.sql` (Enables inline notes for saved items)
    *   `003_add_reminders_and_entities.sql` (Adds entity tags, reminder rows, and item view trackers)
@@ -450,7 +450,7 @@ Verify the server starts correctly:
 ### 3. Flutter Application Startup
 Ensure you have Flutter SDK installed (`>=3.0.0`). Set up your physical device or emulator.
 
-1. Open [lib/services/api_service.dart](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/lib/services/api_service.dart).
+1. Open [lib/services/api_service.dart](./lib/services/api_service.dart).
 2. Change `baseUrl` to point to your backend:
    ```dart
    final String baseUrl = 'http://localhost:3000/api'; // Or your local machine IP / deployed Render URL
@@ -493,4 +493,4 @@ To make Second Brain accessible across web platforms and desktop devices, we hav
 
 The backend architecture, database queries, and pipeline scripts are fully decoupled and will be reused as-is.
 
-For details on component mappings (e.g. converting Dart state to React Context/Zustand, styling Flutter widgets with Tailwind, and handling file drops in Web APIs), read the [NEXTJS_MIGRATION_GUIDE.md](file:///C:/Users/anshu/OneDrive/Desktop/Projects/scnd_brain/NEXTJS_MIGRATION_GUIDE.md) in the project root.
+For details on component mappings (e.g. converting Dart state to React Context/Zustand, styling Flutter widgets with Tailwind, and handling file drops in Web APIs), read the [NEXTJS_MIGRATION_GUIDE.md](./NEXTJS_MIGRATION_GUIDE.md) in the project root.
